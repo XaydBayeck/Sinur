@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/tonyfettes/fcitx5-nord";
     description = "Fcitx5 theme based on Nord color.";
     license = licenses.mit;
-    # maintainers = [ sid ];
+    maintainers = [ sid ];
     platform = platforms.linux;
   };
 }
