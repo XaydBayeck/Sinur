@@ -1,7 +1,8 @@
-{ lib, stdenv, fetchurl, ... }:
+{ lib, pkgs, stdenv, fetchurl, ... }:
 
 let
   commit = "28ada26f4e926a741d8645cb8fa9d9d8ab3a3b70";
+  lib' = lib // import ../../lib { pkgs = pkgs; };
 in
 stdenv.mkDerivation rec {
 
@@ -17,7 +18,7 @@ stdenv.mkDerivation rec {
     cp -r Nord-Dark/ Nord-Light/ $out/share/fcitx5/themes/
   '';
 
-  meta = with lib; {
+  meta = with lib'; {
     homepage = "https://github.com/tonyfettes/fcitx5-nord";
     description = "Fcitx5 theme based on Nord color.";
     license = licenses.mit;
