@@ -8,7 +8,7 @@
 , pango
 , libXext
 , cairo
-, gdk_pixbuf
+# , gdk-pixbuf
 , dbus
 , libglvnd
 , libX11
@@ -37,7 +37,7 @@ let
     pango
     libXext
     cairo
-    gdk_pixbuf
+    # gdk-pixbuf
     dbus
     libglvnd
     libX11
