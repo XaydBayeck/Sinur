@@ -16,7 +16,7 @@
 , # turn 2
   gtk3
 , at-spi2-atk
-, openssl
+, openssl_1_1
 , libjpeg_original
 , libICE
 , libSM
@@ -44,7 +44,7 @@ let
     systemd
     gtk3
     at-spi2-atk
-    openssl
+    openssl_1_1
     libICE
     libSM
     libjpeg_original-v8d
