@@ -17,6 +17,8 @@
   example-package = pkgs.callPackage ./pkgs/example-package { };
   fcitx5-nord = pkgs.callPackage ./pkgs/fcitx5-nord { };
   rofiThemes = pkgs.callPackage ./pkgs/rofi-themes { };
+  # vimPlugins = pkgs.callPackage ./pkgs/vimPlugins { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
+  vofa = pkgs.callPackage ./pkgs/vofa { };
   # ...
 }
