@@ -9,7 +9,7 @@ on:
     # rebuild everyday at 2:51
     # TIP: Choose a random time here so not all repositories are build at once:
     # https://www.random.org/clock-times/?num=1&earliest=01%3A00&latest=08%3A00&interval=5&format=html&rnd=new
-    - cron:  '7 4 * * *'
+    - cron:  '7 4 * * 1'
 jobs:
   tests:
     strategy:
@@ -20,7 +20,7 @@ jobs:
         # The repo name as used in
         # https://github.com/nix-community/NUR/blob/master/repos.json
         nurRepo:
-          - Sinur
+          - <YOUR_REPO_NAME>
         # Set this to cache your build results in cachix for faster builds
         # in CI and for everyone who uses your cache.
         #
@@ -53,7 +53,7 @@ jobs:
     - name: Setup cachix
       uses: cachix/cachix-action@v12
       # Don't replace <YOUR_CACHIX_NAME> here!
-      if: ${{ matrix.cachixName != 'sinur' }}
+      if: ${{ matrix.cachixName != '<YOUR_CACHIX_NAME>' }}
       with:
         name: ${{ matrix.cachixName }}
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
@@ -71,5 +71,5 @@ jobs:
       run: nix shell -f '<nixpkgs>' nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs
     - name: Trigger NUR update
       # Don't replace <YOUR_REPO_NAME> here!
-      if: ${{ matrix.nurRepo != 'Sinur' }}
+      if: ${{ matrix.nurRepo != '<YOUR_REPO_NAME>' }}
       run: curl -XPOST "https://nur-update.nix-community.org/update?repo=${{ matrix.nurRepo }}"
