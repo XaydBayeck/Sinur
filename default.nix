@@ -20,5 +20,6 @@
   # vimPlugins = pkgs.callPackage ./pkgs/vimPlugins { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   guile-gi = pkgs.callPackage ./pkgs/guile-gi { guile = pkgs.guile_3_0; };
+  guile-goblins = pkgs.callPackage ./pkgs/guile-goblins { guile = pkgs.guile_3_0; };
   # ...
 }
