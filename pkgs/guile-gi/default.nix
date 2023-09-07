@@ -7,8 +7,7 @@
   guile ? pkgs.guile_3_0,
   libtool,
   pkg-config,
-  autoconf,
-  automake,
+  autoreconfHook,
   texinfo,
   gettext,
   ... }:
@@ -23,8 +22,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "spk121";
     repo = name;
-    rev = "ea5d0514a4b8c61b8e5eeafa2189eacc6e8fd83f";
-    sha256 = "sha256-B7IzqMuQnM1VjtMzlc+y1/jE+qEsdkWZLcH9idAFa0A=";
+    rev = "388653ac9e95802d1a69c585aef1d60e35e6b71c";
+    sha256 = "sha256-29Q8f7ex8LHIYGRF/KD89PXWXQ/DG6ucqG7J4t/Cv9k=";
   };
 
   nativeBuildInputs = [
@@ -32,8 +31,7 @@ stdenv.mkDerivation {
     gobject-introspection
     libtool
     pkg-config
-    autoconf
-    automake
+    autoreconfHook
     texinfo
     gettext
   ];
@@ -41,6 +39,10 @@ stdenv.mkDerivation {
   buildInputs = [
     guile
     glib
+  ];
+
+  propagatedBuildInputs = [
+    gobject-introspection
   ];
 
   preConfigure = ''
