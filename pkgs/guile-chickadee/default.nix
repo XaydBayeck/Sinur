@@ -6,7 +6,7 @@
 , pkg-config
 , autoconf
 , automake
-, guile-syntax-higlight
+#, guile-syntax-higlight
 , texinfo
 , guile-opengl
 , guile-sdl2
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   version = "0.10.0";
   src = fetchurl {
     url = "https://files.dthompson.us/${pname}/${pname}-${version}.tar.gz";
-    sha256 = "";
+    sha256 = "sha256-Ey9TtuWaGlHG2cYYwqJIt2RX7XNUW28OGl/kuPUCD3U=";
   };
 
   nativeBuildInputs = [
@@ -36,7 +36,7 @@ stdenv.mkDerivation rec {
     autoconf
     automake
     texinfo
-    guile-syntax-higlight
+    #guile-syntax-higlight
   ];
 
   buildInputs = [
