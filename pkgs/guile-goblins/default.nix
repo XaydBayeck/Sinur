@@ -39,7 +39,7 @@ stdenv.mkDerivation rec {
     guile-gnutls
   ];
 
-  makeFlas = [ "GUILE_AUTO_COMPILE=0" ];
+  makeFlags = [ "GUILE_AUTO_COMPILE=0" ];
 
   meta = with lib'; {
     homepage = "https://spritelyproject.org/";

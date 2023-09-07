@@ -21,5 +21,6 @@
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   guile-gi = pkgs.callPackage ./pkgs/guile-gi { guile = pkgs.guile_3_0; };
   guile-goblins = pkgs.callPackage ./pkgs/guile-goblins { guile = pkgs.guile_3_0; };
+  guile-chickadee = pkgs.callPackage ./pkgs/guile-chickadee { guile = pkgs.guile_3_0; };
   # ...
 }
