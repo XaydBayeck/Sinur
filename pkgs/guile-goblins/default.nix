@@ -17,10 +17,10 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "guile-goblins";
-  version = "0.11.0";
+  version = "0.12.0";
   src = fetchurl {
     url = "https://spritely.institute/files/releases/${pname}/${pname}-${version}.tar.gz";
-    sha256 = "sha256-1FD35xvayqC04oPdgts08DJl6PVnhc9K/Dr+NYtxhMU=";
+    sha256 = "sha256-P5WKKv5i5Lrs4en+IWL40AkYAD+bgTyFdsQqE4FxPfA=";
   };
 
   nativeBuildInputs = [
